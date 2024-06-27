@@ -26,7 +26,7 @@ const App = () => {
     <>
       {isLoading && <Loader />}
       {!isLoading && <div className='app pt-2 lg:px-8 lg:pt-8  text-white grid grid-cols-1 lg:grid-cols-2 h-auto' style={{ background: `linear-gradient(90deg, ${bgColor} -50%, rgb(0, 0, 0) 100%)` }}>
-        <div className={'grid-col-1 flex flex-col lg:flex-row  ' + (showListOrPlayer ? "flex" : "hidden")}>
+        <div className={'grid-col-1 lg:flex flex-col lg:flex-row  ' + (showListOrPlayer ? "flex" : "hidden ")}>
           <div className='sidebar sticky mb-2 p-2 top-2 w-full h-14 flex justify-between lg:p-0 lg:w-[20%] lg:h-[90vh] lg:flex-col lg:top-10 '>
             <Sidebar />
           </div>

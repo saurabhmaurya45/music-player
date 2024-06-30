@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentActiveSong } from '../redux/Features/SongData/SongDataSlice'
-
+import { formatDuration } from '../utils'
 
 const SongListCard = ({song,showListOrPlayerHandler}) => {
   const dispatch = useDispatch()
@@ -21,7 +21,7 @@ const SongListCard = ({song,showListOrPlayerHandler}) => {
             <p className='text-white/50 text-sm font-normal'>{song.artist}</p>
           </div>
         </div>
-        <p className='text-lg text-white/50'>4:32</p>
+        <p className='text-lg text-white/50'>{formatDuration(song.duration ?? 0 )}</p>
     </div>
   )
 }
